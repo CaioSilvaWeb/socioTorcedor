@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Koulen&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+header {
+  position: -webkit-sticky; /* Necessário para funcionar no Safari */
+  position: sticky;
+  top: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Rajdhani, Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.faixa {
+  background-color: #1d3d90;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.faixa ul {
+  display: flex;
+}
+.faixa ul li {
+  list-style: none;
+  text-decoration: none;
+}
+.faixa ul li a {
+  text-decoration: none;
+  color: #e6ae00;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.faixa ul li a:first-child {
+  padding-left: 15px;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+article.conteudoJs {
+  text-align: center;
+  margin: 0 auto;
+}
+
+section#cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+}
+section#cards div.card {
+  width: 20rem;
+  box-shadow: 0px 5px 5px 5px #0015;
+  padding: 1rem;
+  margin: 3rem 0 5rem 0;
+  border-radius: 36px;
+  transition: all 0.3s ease-in-out;
+}
+section#cards div.card:hover {
+  background-color: #1d3d90;
+}
+
+section#cards h2 {
+  width: 100%;
+  text-align: center;
+  color: #e6ae00;
+  font-size: 35px;
+}
+section#cards div.card a:first-child {
+  color: #e6ae00;
+  text-decoration: none;
+  font-weight: bold;
+}
+section#cards div.card img {
+  width: 100%;
+}
+
+section#cards div.card h3 {
+  margin-bottom: 1rem;
+}
+
+section#cards div.card p.descricao {
+  margin-bottom: 1rem;
+  height: 160px;
+}
+section#cards div.card .preco {
+  font-size: 30px;
+}
+
+section#cards div.card a#editar {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #e6ae00;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 2rem;
+  border: navajowhite;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+section#cadastro {
+  display: flex;
+  justify-content: center;
+}
+
+section#cadastro img {
+  width: 100%;
+}
+
+section#cadastro h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  color: #e6ae00;
+  font-size: 35px;
+}
+
+section#cadastro form {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+section#cadastro form input {
+  width: 100%;
+  border-radius: 25px;
+  padding: 0.7rem;
+  font-size: 20px;
+  border: 1px solid #1d3d90;
+  outline: none;
+  margin: 0 1rem 1rem 1rem;
+}
+
+section#cadastro form label {
+  margin: 26px;
+
+  font-size: 22px;
+}
+
+section#cadastro form button {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #1d3d90;
+  color: #e6ae00;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: navajowhite;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+section#cadastro form button:hover {
+  background-color: #e6ae00;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #e6ae00;
+  font-size: 30px;
+}
+
+p {
+  color: #e6ae00;
+  font-size: 20px;
+  max-width: 1000px;
+}
+
+@media (max-width: 810px) {
+  h1 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 40px;
+  }
+  p {
+    font-size: 19px;
+    max-width: 382px;
+    text-align: center;
+  }
+
+  #btAvancar {
+    padding: 18px;
+    width: 125px;
+    margin-top: 10px;
+  }
+
+  #legendaUm {
+    margin-bottom: 0;
+    height: 41px;
+  }
+}

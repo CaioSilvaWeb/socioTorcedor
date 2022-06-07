@@ -1,0 +1,26 @@
+{
+  "name": "m2-projeto3-blue-",
+  "version": "1.0.0",
+  "description": "Projeto catalogo M2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaioSilvaWeb/M2-projeto3-Blue-.git"
+  },
+  "author": "Caio Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaioSilvaWeb/M2-projeto3-Blue-/issues"
+  },
+  "homepage": "https://github.com/CaioSilvaWeb/M2-projeto3-Blue-#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

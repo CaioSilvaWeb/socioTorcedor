@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sócio 5 estrelas - Cruzeiro </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/Escudo9.png">
+</head>
+
+<body id="sobe">
+    <header class="faixa">
+        <img src="/img/Escudo9.png" alt="Imagem do escudo do Cruzeiro" width="80px">
+        <ul>
+            <li><a href="#sobe">Home</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+        </ul>
+    </header>
+    <main>
+        <article>
+            <h1>Um novo Cruzeiro está surgindo</h1>
+            <p>Faça parte da recontruçao do cabuloso, nos ajude dando sugestões
+                de novos planos de sócios torcedores pro clube, ou você pode modificar os já existentes, você pode inserir
+                um nome, beneficios e o valor pra esse novo sócio.
+            </p>
+        </article>
+        <article class="conteudoJs">
+            <section id='cards'>
+
+                <h2>Planos</h2>
+
+                <% planos.forEach((planos)=> { %>
+                    <div class="card">
+                        <a href="/sobre/<%=planos.id%>">Clique para saber mais</a>
+                        <h1>
+                            <%= planos.nome %>
+                        </h1>
+                        
+                        <p class="preco">Preço: <%= planos.preco %>
+                        </p>
+                        <a id="editar" href="/detalhes/<%= planos.id %>">Editar</a>
+                    </div>
+                    <% }) %>
+            </section>
+            <section id="cadastro">
+                <div>
+                    <% if (socios==undefined) { %>
+                        <h2>Crie um novo Plano!</h2>
+                        <form action="/create" method="post">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                            <label for="descricao">Descrição:</label>
+                            <input type="text" id="descricao" name="descricao" required>
+                            <label for="preco">Preço:</label>
+                            <input type="text" id="preco" name="preco" required>
+                            <button id="btnCadastrar" onclick="alert ('Obrigado! Você é fundamental para construção de um novo Cruzeiro!')"
+                                type="submit">Cadastrar</button>
+                        </form>
+                        <% } else { %>
+                            <h2>Atualize um dos planos</h2>
+                            <form action="/update/<%= socios.id %>" method="post">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" value="<%= socios.nome %>" required>
+                                <label for="descricao">Descrição:</label>
+                                <input type="text" id="descricao" name="descricao" value="<%= socios.descricao %>" required>
+                                <label for="tipo">Preço:</label>
+                                <input type="text" id="tipo" name="tipo" value="<%= socios.preco %>" required>
+                                <button id="btnAtualizar" type="submit" onclick="alert ('Você atualizou um plano!')">Atualizar</button>
+                            </form>
+                            <% } %>
+                </div>
+    
+            </section>
+        </article>
+    </main>
+    <footer class="faixa">
+        <p>Desenvolvido por @eucaiosilvawebs</p>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
