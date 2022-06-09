@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes</title>
+    <title>Detalhes do plano</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/Escudo9.png">
 </head>
@@ -17,7 +17,7 @@
             <img src="/img/Escudo9.png" alt="Imagem do escudo do Cruzeiro" width="80px">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/#cadastro">Cadastro</a></li>
+                <li><a href="/criar">Cadastro</a></li>
             </ul>
         </header>
         <main>
@@ -27,12 +27,12 @@
                 
                     <div class="card">
                         <h1>
-                            <%= planos[id].nome %>
+                            <%= socio.nome %>
                         </h1>
                         <p class="descricao">Descrição:<br>
-                            <%= planos[id].descricao %>
+                            <%= socio.descricao %>
                         </p>
-                        <p class="preco">Preço: <%= planos[id].preco %>
+                        <p class="preco">Preço: <%= socio.preco %>
                         </p>
                     </div>
 

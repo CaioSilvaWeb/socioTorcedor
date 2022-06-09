@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Seu plano</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/Escudo9.png">
+    <style>
+        section#cadastro{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="faixa">
+        <img src="/img/Escudo9.png" alt="Imagem do escudo do Cruzeiro" width="80px">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/criar">Cadastro</a></li>
+        </ul>
+    </header>
+    <section id="cadastro">
+        <h2>Atualize um dos planos</h2>
+        <form action="<%= socio.id %>" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="<%= socio.nome %>" required>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" value="<%= socio.descricao %>" required>
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" value="<%= socio.preco %>" required>
+            <div class="bntEdAp">
+                <button id="btnAtualizar" type="submit" onclick="alert ('Você atualizou um plano!')">Atualizar</button>
+                <a href="/deletar/<%= socio.id %>" onclick="alert ('Você apagou um plano!')">Apagar</a>
+            </div>
+        </form>
+    </section>
+    <footer class="faixa">
+        <p>Desenvolvido por @eucaiosilvawebs</p>
+    </footer>
+</body>
+
+</html>

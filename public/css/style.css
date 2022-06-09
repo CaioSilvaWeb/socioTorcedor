@@ -138,6 +138,9 @@ section#cadastro form {
   margin-bottom: 50px;
 }
 
+section#cadastro form a{
+
+}
 section#cadastro form input {
   width: 100%;
   border-radius: 25px;
@@ -150,11 +153,10 @@ section#cadastro form input {
 
 section#cadastro form label {
   margin: 26px;
-
   font-size: 22px;
 }
 
-section#cadastro form button {
+section#cadastro form button{
   padding: 10px 20px;
   display: flex;
   justify-content: center;
@@ -168,10 +170,32 @@ section#cadastro form button {
   border-radius: 20px;
   font-weight: bolder;
 }
+section#cadastro form a{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #1d3d90;
+  color: #e6ae00;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: navajowhite;
+  border-radius: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  width: 30%;
+}
 
 section#cadastro form button:hover {
   background-color: #e6ae00;
   color: #fff;
+}
+
+section#cadastro form div.bntEdAp{
+  display: flex;
+    max-width: 227px;
+    margin: 0 auto;
 }
 
 footer {

@@ -15,7 +15,7 @@
         <img src="/img/Escudo9.png" alt="Imagem do escudo do Cruzeiro" width="80px">
         <ul>
             <li><a href="#sobe">Home</a></li>
-            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="/criar">Cadastro</a></li>
         </ul>
     </header>
     <main>
@@ -31,54 +31,24 @@
 
                 <h2>Planos</h2>
 
-                <% planos.forEach((planos)=> { %>
+                <% socios.forEach(item => { %>
                     <div class="card">
-                        <a href="/sobre/<%=planos.id%>">Clique para saber mais</a>
+                        <a href="/socios/<%=item.id%>">Clique para saber mais</a>
                         <h1>
-                            <%= planos.nome %>
+                            <%= item.nome %>
                         </h1>
                         
-                        <p class="preco">Preço: <%= planos.preco %>
+                        <p class="preco">Preço: <%= item.preco %>
                         </p>
-                        <a id="editar" href="/detalhes/<%= planos.id %>">Editar</a>
+                        <a id="editar" href="/editar/<%= item.id %>">Editar</a>
                     </div>
                     <% }) %>
-            </section>
-            <section id="cadastro">
-                <div>
-                    <% if (socios==undefined) { %>
-                        <h2>Crie um novo Plano!</h2>
-                        <form action="/create" method="post">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required>
-                            <label for="descricao">Descrição:</label>
-                            <input type="text" id="descricao" name="descricao" required>
-                            <label for="preco">Preço:</label>
-                            <input type="text" id="preco" name="preco" required>
-                            <button id="btnCadastrar" onclick="alert ('Obrigado! Você é fundamental para construção de um novo Cruzeiro!')"
-                                type="submit">Cadastrar</button>
-                        </form>
-                        <% } else { %>
-                            <h2>Atualize um dos planos</h2>
-                            <form action="/update/<%= socios.id %>" method="post">
-                                <label for="nome">Nome:</label>
-                                <input type="text" id="nome" name="nome" value="<%= socios.nome %>" required>
-                                <label for="descricao">Descrição:</label>
-                                <input type="text" id="descricao" name="descricao" value="<%= socios.descricao %>" required>
-                                <label for="tipo">Preço:</label>
-                                <input type="text" id="tipo" name="tipo" value="<%= socios.preco %>" required>
-                                <button id="btnAtualizar" type="submit" onclick="alert ('Você atualizou um plano!')">Atualizar</button>
-                            </form>
-                            <% } %>
-                </div>
-    
             </section>
         </article>
     </main>
     <footer class="faixa">
         <p>Desenvolvido por @eucaiosilvawebs</p>
     </footer>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
