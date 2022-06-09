@@ -29,4 +29,10 @@ const Socios = database.sequelize.define("socios", {
 }
 );
 
+const initTable = async () =>{
+  await Socios.sync();
+}
+
+initTable();
+
 module.exports = Socios;
