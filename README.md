@@ -7,7 +7,7 @@
 + EXPRESS
 + BANCO DE DADOS
 
-#### Deploy: https://catalogobluee.herokuapp.com/
+#### Deploy: https://catalogobd.herokuapp.com/
   
 ## Orientações:
   
